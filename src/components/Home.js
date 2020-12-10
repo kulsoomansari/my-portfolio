@@ -1,10 +1,22 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import Trail from './Trail'
+import Transition from './Transition'
 export default function Home() {
+    const [open, set] = useState(true)
+    const [tagline, setTagline] = useState('Matric, Inter, B.S')
     return (
-        <div>
-            <h1>My Portfolio</h1>
-            <h2>Hey, I'm kulsoom</h2>
-        </div>
+      <div className="margin">
+        <h1 className="underline">My Portfolio</h1>
+        <Trail open={open} onClick={() => set((state) => !state)}>
+        <span>Kulsoom</span>
+        <span>Ansari</span>
+      </Trail>
+      <h1 className="underline">My Skills</h1>
+      <Transition />
+      <h1 className="underline">My Qualification</h1>
+    <h4>{tagline}</h4>
+      </div>
+      
+      
     )
-}
+  }

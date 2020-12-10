@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Contacts from "./components/Contacts";
 import Works from "./components/Works";
+import NavBar1 from "./components/NavBar1";
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -12,14 +13,9 @@ import {
 } from "react-router-dom";
 function App() {
   return (
-    <div>
+    <div className="bgImage">
      <Router>
-       <nav className= "myNav">
-         <Link to="/">Home</Link>
-         <Link to="/about">About Me</Link>
-         <Link to="/contacts">Contacts</Link>
-         <Link to="works">My Works</Link>
-        </nav>
+       <NavBar1 />
         <Switch>
         <Route path="/works">
            <Works />
