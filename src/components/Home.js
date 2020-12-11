@@ -6,10 +6,11 @@ export default function Home() {
     const [tagline, setTagline] = useState('Matric, Inter, B.S')
     return (
       <div className="margin">
-        <h1 className="underline">My Portfolio</h1>
         <Trail open={open} onClick={() => set((state) => !state)}>
         <span>Kulsoom</span>
         <span>Ansari</span>
+        <span>Portfolio</span>
+        <span>Site</span>
       </Trail>
       <h1 className="underline">My Skills</h1>
       <Transition />
